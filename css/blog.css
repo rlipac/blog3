@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #515151;
+}
+
+a {
+    color: #515151;
+    
+}
+
+header {
+    margin-bottom: 40px;
+    
+    height: 50px; 
+    padding: 0 10px;
+    background: #263C49;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.header-right {
+    height: inherit;
+    display: flex;
+    align-items: center; /* alinienado el boton inicio sescion*/
+}
+
+.header-right .button {
+    margin-left: 14px;
+}
+
+.button {
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, .3); /* dandole sombra al boton*/
+    border-radius: 5px    ;
+    text-decoration: none;
+    color: white;
+    background: gray;
+    border-bottom: 5px solid black;
+    font-size:  14px;
+    padding: 5px 10px 10px; /* dado estilos al boton inicio sescion */
+    transition: .2s; /* tiempo de trasnsiocion del efecto presion boton*/
+}
+
+.button.red {
+    background: #e74c3c;
+}
+
+.button:active {
+    transform: scale(.9); /* dondole efecto de boton fisico */
+}
+
+nav {
+   
+   
+   /*  float:right; */
+    /*  position: absolute;
+         right: 200px;
+         top: 0; */ 
+    height: inherit; /* alto heredado del header */
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    height: inherit; /* alto heredado del padre */
+}
+nav li {
+    
+    list-style: none; /* elimina los estilos del li */
+    color: white;
+     height: inherit; /* alto heredado del padre */
+    display: flex; 
+    align-items: center; /* centralos items */
+
+}
+
+nav li:after {
+    content: "|";
+    display: inline-block;
+   /*  margin: 0 10px; */
+    
+}
+nav li:last-child:after{
+    display: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    height: inherit;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+}
+ 
+nav a:hover {
+    /* box-shadow: donde se ubica ls dombra, x, y, difuminado , color;*/
+    box-shadow: inset 0 8px 0 #e74c3c !important;
+}
+
+nav a.is-active {
+   box-shadow: inset 0 8px 0 #27ae60;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 600;
+    margin-bottom:  15px;
+}
+
+.blog {
+   width: 1000px;
+    margin: auto;
+}
+
+
+.portada {
+    
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.portada .description {
+    background: rgba(255, 255, 255, .6);
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    padding: 20px;  
+    
+}
+
+.blog-items {
+    display: flex; /* se poner uno delate del otro */
+    flex-wrap: wrap; /*cuando no tine espacio se ubica abajo */
+    /* justify-content:space-around;pone el mismo margen para todos los costados */
+    justify-content: space-between;/* solo pone margenes entre los items */
+    
+}
+
+.blog-items h3 {
+    font-weight: 600;
+    margin: 10px 0 15px;
+}
+
+.item-blog {
+    width: 300px;
+}
+.item-blog  .foto { 
+    width: 300px;
+    height: 300px;
+}
+
+.item-blog .description {
+    margin-bottom: 22px;  /*  agrergandole margen inferio s ala targeta imagenes*/
+}
+
+.paginador {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 20px 0;         
+    
+}
+
+.paginador ul {
+
+    display: flex;
+    list-style: none;
+    margin: 0px; 
+    padding: 0;
+    margin-left:  15px;
+}
+
+.paginador li {
+    display: inline-block;
+    background: #eaeaea;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid gray;
+    margin: 0 5px;
+}
+
+.paginador li.selected {
+    border-color: transparent;
+    /* background: white; */
+    
+   
+}
+
+.paginador a {
+    padding: 0 12px;
+    text-decoration: none;
+    display: block;
+    height: inherit;
+}
+
+.autor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    border-top:  1px solid gray;
+    padding-top: 15px; /* agregando estilos  al caja del autor*/
+}
+
+.autor img {
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 8px;/*agregandomargen derecho al imagen del aotor */
+}
+
+.autor p {
+    margin-bottom: 0;
+}
